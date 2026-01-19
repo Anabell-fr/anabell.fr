@@ -50,19 +50,31 @@
       top:12px;
       z-index:10;
     }
+
     .brand{
       display:flex;
       align-items:center;
       gap:12px;
-      font-weight:700;
+      font-weight:800;
+      letter-spacing:.2px;
+      /* ✅ plus gros, effet "logo" */
+      font-size:22px;
+      line-height:1;
     }
+    .brand .tld{
+      opacity:.7;
+      font-weight:800;
+    }
+
     .dot{
       width:10px;
       height:10px;
       border-radius:999px;
       background:var(--accent);
       box-shadow:0 0 18px rgba(45,255,106,.55);
+      flex:0 0 auto;
     }
+
     .contact-top{
       margin-left:auto;
       padding:10px 16px;
@@ -86,6 +98,7 @@
       .hero{grid-template-columns:1fr}
       .topbar{position:static}
       .contact-top{margin-left:0}
+      .brand{font-size:20px}
     }
 
     .card{
@@ -108,6 +121,7 @@
       background:rgba(12,12,14,.6);
     }
 
+    /* ✅ (On garde la classe .led au cas où, mais on ne l'utilise plus) */
     .led{
       margin:14px 0 10px;
       font-weight:900;
@@ -142,7 +156,7 @@
     .hero-image{
       padding:0;
       overflow:hidden;
-      min-height: 240px;
+      min-height:240px;
     }
     .hero-image img{
       width:100%;
@@ -276,7 +290,7 @@
   <div class="topbar">
     <div class="brand">
       <span class="dot"></span>
-      <span>AnaBell<span style="opacity:.7">.fr</span></span>
+      <span>AnaBell<span class="tld">.fr</span></span>
     </div>
 
     <a class="contact-top mono" href="mailto:Ducourtieux.sebastien@gmail.com">
@@ -292,7 +306,7 @@
         <span>Affichage pédagogique du bruit</span>
       </div>
 
-      <div class="led">62 <small>dB</small></div>
+      <!-- ✅ SUPPRIMÉ : le 62 dB (bloc .led) -->
 
       <h1>Un affichage simple du niveau sonore ambiant.</h1>
 
@@ -309,9 +323,9 @@
       </div>
     </div>
 
-    <!-- IMAGE EN FACE -->
+    <!-- ✅ IMAGE EN FACE : anabell2.jpg -->
     <div class="card hero-image" aria-label="Visuel produit AnaBell">
-      <img src="anabell1.jpg" alt="AnaBell – visuel produit (affichage 62 dB)">
+      <img src="anabell2.jpg" alt="AnaBell – visuel produit">
     </div>
   </div>
 

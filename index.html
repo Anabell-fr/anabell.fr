@@ -35,6 +35,7 @@
 
     .wrap{max-width:1100px;margin:0 auto;padding:34px 18px 60px}
 
+    /* Top bar */
     .topbar{
       display:flex;
       align-items:center;
@@ -73,6 +74,7 @@
       white-space:nowrap;
     }
 
+    /* Hero */
     .hero{
       margin-top:28px;
       display:grid;
@@ -136,6 +138,7 @@
       font-size:14px;
     }
 
+    /* Sections */
     section{margin-top:18px}
     .grid2{
       display:grid;
@@ -181,6 +184,7 @@
       border-radius:8px;
       border:1px solid rgba(45,255,106,.35);
       background:rgba(45,255,106,.10);
+      box-shadow:0 0 14px rgba(45,255,106,.12);
       display:flex;
       align-items:center;
       justify-content:center;
@@ -188,6 +192,7 @@
     }
     .check svg{width:14px;height:14px;fill:var(--accent)}
 
+    /* Image */
     .photo-wrap{
       display:flex;
       gap:14px;
@@ -227,8 +232,11 @@
       .photo{flex:1 1 auto}
     }
 
-    .mono{font-family:ui-monospace,Menlo,Consolas,monospace}
+    .mono{
+      font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;
+    }
 
+    /* Footer */
     .footer{
       margin-top:28px;
       padding:16px 8px;
@@ -241,7 +249,7 @@
       gap:10px;
     }
 
-    .small{color:var(--muted2);font-size:13px}
+    .small{color:var(--muted2);font-size:13px;line-height:1.55}
   </style>
 </head>
 
@@ -253,51 +261,89 @@
       <span class="dot"></span>
       <span>AnaBell<span style="opacity:.7">.fr</span></span>
     </div>
+
     <a class="contact-top mono" href="mailto:Ducourtieux.sebastien@gmail.com">
       ✉️ Ducourtieux.sebastien@gmail.com
     </a>
   </div>
 
+  <!-- HERO -->
   <div class="hero">
     <div class="card pad">
       <div class="kicker">
         <span class="dot"></span>
         <span>Affichage pédagogique du bruit</span>
       </div>
+
       <div class="led">62 <small>dB</small></div>
+
       <h1>Un affichage simple du niveau sonore ambiant.</h1>
+
       <p>
         AnaBell est un dispositif d’affichage <b>pédagogique</b> du bruit.
         Il rend le niveau sonore visible afin de sensibiliser le public
         aux niveaux de bruit ambiant et encourager un environnement plus calme.
       </p>
+
       <div class="bullets">
         <div class="pill">Lisible à distance</div>
         <div class="pill">Robuste & discret</div>
         <div class="pill">Non métrologique</div>
       </div>
     </div>
-    <div class="card pad"></div>
+
+    <div class="card pad">
+      <p></p>
+      <p class="small"></p>
+    </div>
   </div>
 
+  <!-- MODULES (issus du devis) -->
   <section>
     <div class="tile">
       <h2>Ce que comprend AnaBell</h2>
       <p class="small">
         AnaBell est un dispositif <b>clé en main</b> : l’objectif est d’obtenir un résultat clair, simple à utiliser et cohérent avec votre lieu.
       </p>
+
       <div class="photo-wrap">
         <div style="flex:1 1 auto">
           <ul class="list">
-            <li><span class="check"><svg viewBox="0 0 24 24"><path d="M9.2 16.6 4.9 12.3l1.4-1.4 2.9 2.9 8.4-8.4 1.4 1.4z"/></svg></span>Un affichage pédagogique du bruit à haute lisibilité.</li>
-            <li><span class="check"><svg viewBox="0 0 24 24"><path d="M9.2 16.6 4.9 12.3l1.4-1.4 2.9 2.9 8.4-8.4 1.4 1.4z"/></svg></span>Un système de captation sonore dédié à la sensibilisation.</li>
-            <li><span class="check"><svg viewBox="0 0 24 24"><path d="M9.2 16.6 4.9 12.3l1.4-1.4 2.9 2.9 8.4-8.4 1.4 1.4z"/></svg></span>Un traitement dynamique du niveau sonore ambiant.</li>
-            <li><span class="check"><svg viewBox="0 0 24 24"><path d="M9.2 16.6 4.9 12.3l1.4-1.4 2.9 2.9 8.4-8.4 1.4 1.4z"/></svg></span>Des seuils visuels paramétrables selon le lieu et l’usage.</li>
-            <li><span class="check"><svg viewBox="0 0 24 24"><path d="M9.2 16.6 4.9 12.3l1.4-1.4 2.9 2.9 8.4-8.4 1.4 1.4z"/></svg></span>Une intégration esthétique adaptée à l’espace.</li>
+            <li>
+              <span class="check">
+                <svg viewBox="0 0 24 24"><path d="M9.2 16.6 4.9 12.3l1.4-1.4 2.9 2.9 8.4-8.4 1.4 1.4z"/></svg>
+              </span>
+              <span>Un affichage pédagogique du bruit à haute lisibilité.</span>
+            </li>
+            <li>
+              <span class="check">
+                <svg viewBox="0 0 24 24"><path d="M9.2 16.6 4.9 12.3l1.4-1.4 2.9 2.9 8.4-8.4 1.4 1.4z"/></svg>
+              </span>
+              <span>Un système de captation sonore dédié à la sensibilisation.</span>
+            </li>
+            <li>
+              <span class="check">
+                <svg viewBox="0 0 24 24"><path d="M9.2 16.6 4.9 12.3l1.4-1.4 2.9 2.9 8.4-8.4 1.4 1.4z"/></svg>
+              </span>
+              <span>Un traitement dynamique du niveau sonore ambiant.</span>
+            </li>
+            <li>
+              <span class="check">
+                <svg viewBox="0 0 24 24"><path d="M9.2 16.6 4.9 12.3l1.4-1.4 2.9 2.9 8.4-8.4 1.4 1.4z"/></svg>
+              </span>
+              <span>Des seuils visuels paramétrables selon le lieu et l’usage.</span>
+            </li>
+            <li>
+              <span class="check">
+                <svg viewBox="0 0 24 24"><path d="M9.2 16.6 4.9 12.3l1.4-1.4 2.9 2.9 8.4-8.4 1.4 1.4z"/></svg>
+              </span>
+              <span>Une intégration esthétique adaptée à l’espace.</span>
+            </li>
           </ul>
         </div>
 
-        <div class="photo">
+        <!-- PHOTO : SEULE MODIFICATION -->
+        <div class="photo" aria-label="Photo AnaBell">
           <img src="assets/anabell-en-situation.jpg"
                alt="AnaBell – affichage pédagogique du bruit en situation réelle" />
           <div class="photo-note">Installation en situation réelle</div>
@@ -306,8 +352,63 @@
     </div>
   </section>
 
+  <section>
+    <div class="grid3">
+      <div class="tile">
+        <h3>Installation & mise en service</h3>
+        <p>
+          AnaBell est installé sur site et configuré selon l’environnement sonore.
+          L’objectif est une utilisation simple et efficace au quotidien.
+        </p>
+      </div>
+
+      <div class="tile">
+        <h3>Paramétrage</h3>
+        <p>
+          Les seuils d’affichage peuvent être ajustés afin de correspondre au contexte du lieu
+          (salle d’attente, commerce, espace partagé… intérieur ou extérieur ).
+        </p>
+      </div>
+
+      <div class="tile">
+        <h3>Garantie</h3>
+        <p>
+          Le dispositif bénéficie d’une <b>garantie de fonctionnement de 24 mois</b>.
+          Il est conçu et assemblé en France avec des composants et matériaux français.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="grid2">
+      <div class="tile">
+        <h2>Cadre d’utilisation</h2>
+        <p>
+          AnaBell est un dispositif d’affichage <b>pédagogique</b> du bruit.
+          Il indique une valeur pédagogique destinée à la sensibilisation.
+        </p>
+        <p class="small">
+          Il ne constitue pas un appareil de mesure réglementaire et ne se substitue pas à un sonomètre normé.
+        </p>
+      </div>
+
+      <div class="tile">
+        <h2>Protection & propriété intellectuelle</h2>
+        <p>
+          AnaBell® est un dispositif original.
+          Le concept, le nom et certains éléments de conception font l’objet d’une démarche de protection auprès de l’INPI.
+        </p>
+        <p class="small">
+          Mention d’information – sans caractère contractuel.
+        </p>
+      </div>
+    </div>
+  </section>
+
   <div class="footer">
     <div>© AnaBell.fr</div>
+    <div></div>
   </div>
 
 </div>

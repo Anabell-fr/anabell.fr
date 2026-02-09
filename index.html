@@ -56,16 +56,12 @@
       align-items:center;
       gap:12px;
       font-weight:800;
-      letter-spacing:.2px;
       font-size:22px;
-      line-height:1;
     }
     .brand .tld{opacity:.7}
 
     .dot{
-      width:10px;
-      height:10px;
-      border-radius:999px;
+      width:10px;height:10px;border-radius:999px;
       background:var(--accent);
       box-shadow:0 0 18px rgba(45,255,106,.55);
     }
@@ -91,8 +87,6 @@
     @media(max-width:900px){
       .hero{grid-template-columns:1fr}
       .topbar{position:static}
-      .contact-top{margin-left:0}
-      .brand{font-size:20px}
     }
 
     .card{
@@ -105,20 +99,18 @@
 
     .kicker{
       display:inline-flex;
-      align-items:center;
       gap:10px;
       font-size:13px;
       color:var(--muted);
       border:1px solid var(--stroke);
       padding:8px 12px;
       border-radius:999px;
-      background:rgba(12,12,14,.6);
     }
 
     h1{margin:0 0 10px;font-size:34px}
     p{margin:0 0 12px;color:var(--muted);line-height:1.6}
 
-    .bullets{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+    .bullets{display:flex;gap:10px;margin-top:12px}
     .pill{
       padding:10px 12px;
       border-radius:999px;
@@ -130,21 +122,22 @@
 
     /* HERO GIF */
     .hero-image{
-  padding:0;
-  overflow:hidden;
-  min-height:240px;
-  max-height:320px;   /* ⬅️ limite la hauteur */
-}
-
+      min-height:240px;
+      max-height:320px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#000;
+      overflow:hidden;
+    }
     .hero-image img{
       width:100%;
       height:100%;
-      object-fit:cover;
-      display:block;
+      object-fit:contain;
     }
 
+    /* Sections */
     section{margin-top:18px}
-
     .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
     .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
     @media(max-width:900px){
@@ -161,8 +154,8 @@
     .tile h2{margin:0 0 10px;font-size:18px}
     .tile h3{margin:0 0 8px;font-size:16px}
 
-    .list{margin:10px 0 0;padding:0;list-style:none;display:grid;gap:10px}
-    .list li{display:flex;gap:10px;color:var(--muted);line-height:1.55}
+    .list{list-style:none;padding:0;display:grid;gap:10px}
+    .list li{display:flex;gap:10px;color:var(--muted)}
 
     .check{
       width:22px;height:22px;border-radius:8px;
@@ -170,7 +163,6 @@
       background:rgba(45,255,106,.10);
       display:flex;align-items:center;justify-content:center;
     }
-    .check svg{width:14px;height:14px;fill:var(--accent)}
 
     .photo-wrap{display:flex;gap:14px}
     .photo{
@@ -178,7 +170,6 @@
       border-radius:16px;
       border:1px solid var(--stroke);
       overflow:hidden;
-      min-height:220px;
     }
     .photo img{width:100%;height:100%;object-fit:cover}
 
@@ -217,19 +208,9 @@
   <!-- HERO -->
   <div class="hero">
     <div class="card pad">
-      <div class="kicker">
-        <span class="dot"></span>
-        <span>Affichage pédagogique du bruit</span>
-      </div>
-
+      <div class="kicker"><span class="dot"></span>Affichage pédagogique du bruit</div>
       <h1>Un affichage simple du niveau sonore ambiant.</h1>
-
-      <p>
-        AnaBell est un dispositif d’affichage <b>pédagogique</b> du bruit.
-        Il rend le niveau sonore visible afin de sensibiliser le public
-        aux niveaux de bruit ambiant et encourager un environnement plus calme.
-      </p>
-
+      <p>AnaBell est un dispositif pédagogique rendant visible le bruit ambiant afin de sensibiliser le public.</p>
       <div class="bullets">
         <div class="pill">Lisible à distance</div>
         <div class="pill">Robuste & discret</div>
@@ -237,10 +218,8 @@
       </div>
     </div>
 
-    <!-- GIF LONG -->
-    <div class="card hero-image" aria-label="Démonstration AnaBell en fonctionnement">
-      <img src="assets/anabell_long.gif"
-           alt="AnaBell – affichage pédagogique du bruit en fonctionnement">
+    <div class="card hero-image">
+      <img src="assets/anabell_long.gif" alt="AnaBell en fonctionnement">
     </div>
   </div>
 
@@ -248,22 +227,38 @@
   <section>
     <div class="tile">
       <h2>Ce que comprend AnaBell</h2>
-
       <div class="photo-wrap">
-        <div style="flex:1">
-          <ul class="list">
-            <li><span class="check">✓</span>Un affichage pédagogique du bruit.</li>
-            <li><span class="check">✓</span>Une captation sonore dédiée.</li>
-            <li><span class="check">✓</span>Un traitement dynamique.</li>
-            <li><span class="check">✓</span>Des seuils visuels paramétrables.</li>
-            <li><span class="check">✓</span>Une intégration esthétique.</li>
-          </ul>
-        </div>
-
+        <ul class="list" style="flex:1">
+          <li><span class="check"></span>Affichage pédagogique haute lisibilité</li>
+          <li><span class="check"></span>Captation sonore dédiée</li>
+          <li><span class="check"></span>Traitement dynamique</li>
+          <li><span class="check"></span>Seuils paramétrables</li>
+          <li><span class="check"></span>Intégration esthétique</li>
+        </ul>
         <div class="photo">
-          <img src="assets/anabell-en-situation.jpg"
-               alt="AnaBell en situation réelle">
+          <img src="assets/anabell-en-situation.jpg" alt="AnaBell installé">
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="grid3">
+      <div class="tile"><h3>Installation</h3><p>Installation et configuration sur site.</p></div>
+      <div class="tile"><h3>Paramétrage</h3><p>Adapté à chaque environnement sonore.</p></div>
+      <div class="tile"><h3>Garantie</h3><p>Garantie de fonctionnement 24 mois.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="grid2">
+      <div class="tile">
+        <h2>Cadre d’utilisation</h2>
+        <p>Dispositif pédagogique, non métrologique.</p>
+      </div>
+      <div class="tile">
+        <h2>Protection & propriété intellectuelle</h2>
+        <p>Démarche de protection INPI en cours.</p>
       </div>
     </div>
   </section>
